@@ -37,10 +37,35 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const updateButtonHandler = async (event) => {
+  // const updateBtn = document.getElementById('updateBtn');
+  const response = await fetch(`/api/blogpost/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // pass text title and desc text value data into edit
+    body: JSON.stringify({
+      title: req.body.title,
+      description: req.body.description,
+    }),
+  });
+
+  if (response.ok) {
+    document.location.replace('/dashboard');
+  } else {
+    alert('Failed to update blog post');
+  }
+};
+
 document
   .querySelector('.new-blogPost-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  // .querySelector('.blogPost-list')
+  .querySelector('.blogPost-list')
   .addEventListener('click', delButtonHandler);
+
+document
+  .querySelector('#updateBtn')
+  .addEventListener('click', updateButtonHandler);

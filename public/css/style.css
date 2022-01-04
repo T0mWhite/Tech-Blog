@@ -1,4 +1,4 @@
-header, .blogPost:not(:last-child) {
+header, .blogPost:not(:last-child) .comment:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -15,4 +15,9 @@ header, .blogPost:not(:last-child) {
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
+}
+
+.comment-button {
+  display: flex;
+  justify-content: center;
 }

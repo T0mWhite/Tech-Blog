@@ -16,22 +16,22 @@ BlogPost.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING(5000),
+      type: DataTypes.STRING(1000),
       allowNull: false,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-      user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
+      date_created: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+        user_id: {
+          type: DataTypes.INTEGER,
+          references: {
+            model: 'user',
+            key: 'id',
+          },
         },
       },
     },
-  },
   {
     sequelize,
     timestamps: false,

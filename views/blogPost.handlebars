@@ -11,7 +11,12 @@
   {{#each blogpost.comments as |comment|}}
   {{> comments}}
   {{/each}}
-  {{else}}
-  <h6>No comments yet...</h6>
   {{/if}}
+</div>
+<div class="text-center" text-align="center">
+  <label for="comment">Leave a comment:</label>
+  </br>
+  <textarea id="comment" type="text" name="comment" rows="5" cols="33"></textarea>
+  </br>
+  <button class="comment-button" name="">Submit</button>
 </div>
