@@ -22,7 +22,7 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
+  if (event.target.hasAttribute('data-id') && event.target.matches(".deleteBtn")) {
     const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/blogpost/${id}`, {
@@ -38,7 +38,8 @@ const delButtonHandler = async (event) => {
 };
 
 const updateButtonHandler = async (event) => {
-  // const updateBtn = document.getElementById('updateBtn');
+  event.preventDefault();
+  const id = event.target.getAttribute('data-id');
   const response = await fetch(`/api/blogpost/${id}`, {
     method: 'PUT',
     headers: {
@@ -46,11 +47,11 @@ const updateButtonHandler = async (event) => {
     },
     // pass text title and desc text value data into edit
     body: JSON.stringify({
-      title: req.body.title,
-      description: req.body.description,
+      title: document.getElementById('edit-post-title').value,
+      description: document.getElementById('edit-post-title').value,
     }),
   });
-
+  
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {

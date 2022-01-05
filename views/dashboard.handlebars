@@ -33,21 +33,21 @@
         <h4><a href="/blogpost/{{blogPost.id}}" data-id="{{blogPost.title}}">{{blogPost.title}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{blogPost.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger deleteBtn" data-id="{{blogPost.id}}">DELETE</button>
       </div>
       
 {{!-- Update text area --}}
     <form class="form new-blogPost-form">
       <div class="form-group">
         <label for="blogPost-title">Post Title:</label>
-        <input class="form-input" type="text" name="blogPost-title" value="{{blogPost.title}}"/>
+        <input id="edit-post-title" class="form-input" type="text" name="blogPost-title" value="{{blogPost.title}}"/>
       </div>
       <div class="form-group">
         <label for="blogPost-desc">Post Body:</label>
-        <textarea class="form-input" name="blogPost-desc" rows="1">{{blogPost.description}}</textarea>
+        <textarea id="edit-post-desc" class="form-input" name="blogPost-desc" rows="1">{{blogPost.description}}</textarea>
       </div>
       <div class="form-group">
-        <button id="updateBtn" type="submit" class="btn btn-primary">Edit</button>
+        <button id="updateBtn" type="submit" class="btn btn-primary" data-id="{{blogPost.id}}">Edit</button>
       </div>
     </form>
     </div>
