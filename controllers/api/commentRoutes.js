@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   console.log(
-    'COMMENT ROUTE POST HAS BEEN INITIATED. STANDBY FOR SHITPOSTING-------------------------------------------'
+    'COMMENT ROUTE POST HAS BEEN INITIATED. STANDBY FOR POSTING-------------------------------------------'
   );
 console.log(req.body);
   try {

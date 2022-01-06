@@ -3,15 +3,15 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const comment = document.querySelector('#comment').value.trim();
-  const articleId = document.querySelector('.commentPostId').value;
+  const article_id = document.querySelector('.commentPostId').value;
 
 
-  if (comment && articleId) {
+  if (comment && article_id) {
     console.log('ENTERED NEW FORM HANDLER IF STATEMENT');
     console.log(comment);
     const response = await fetch(`/api/comment`, {
       method: 'POST',
-      body: JSON.stringify({ comment, articleId }),
+      body: JSON.stringify({ comment, article_id }),
       headers: {
         'Content-Type': 'application/json',
       },
