@@ -1,4 +1,4 @@
-header, .blogPost:not(:last-child) .comment:not(:last-child) {
+header, .article:not(:last-child) .comment:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 

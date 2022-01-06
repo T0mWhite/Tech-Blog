@@ -1,0 +1,30 @@
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+</div>
+
+
+{{!-- Comment form --}}
+<div class="text-center" text-align="center">
+  <form id="comment-form">
+    <input class="commentPostId" type="hidden" value={{id}} />
+    <label for="comment">Leave a comment:</label>
+    </br>
+    <textarea id="comment" type="text" name="comment" rows="5" cols="33"></textarea>
+    </br>
+    <button type="submit" name="comment-submit">Submit</button>
+  </form>
+</div>
+
+<div class="text-center">
+  {{#if comments.length}}
+  <h3>Comments</h3>
+  {{#each comments as |comment|}}
+  {{> comments}}
+  {{/each}}
+  {{/if}}
+</div>
+
+  <script src="/js/comment.js"></script>

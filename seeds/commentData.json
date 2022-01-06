@@ -1,17 +1,17 @@
 [
   {
     "comment": "Shooby do wop bop!",
-    "blogPost_id": "1",
+    "article_id": "1",
     "user_id": "1"
   },
   {
     "comment": "Shiggity?",
-    "blogPost_id": "2",
+    "article_id": "2",
     "user_id": "2"
   },
   {
     "comment": "Diggity doo!",
-    "blogPost_id": "3",
+    "article_id": "3",
     "user_id": "3"
   }
 ]
